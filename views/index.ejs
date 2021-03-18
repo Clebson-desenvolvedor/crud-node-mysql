@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container ">
+  <h2><%= title %></h2>
+  <a href="/add" class="btn btn-sm btn-primary">Novo Relógio</a><br/><br/>
+  <table class="table table-success table-striped" >
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>MARCA</th>
+        <th>MODELO</th>
+        <th>CALIBRE</th>
+        <th>MOVIMENTO</th>
+        <th>CAIXA</th>
+        <th>COR DA CAIXA</th>
+        <th>PULSEIRA</th>
+        <th>COR DA PULSEIRA</th>
+        <th>AÇÃO</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% relogios.forEach(function(dadosrelogios){ %>
+            <tr>
+                <td><%= dadosrelogios.id_relogio %></td>
+                <td><%= dadosrelogios.marca %></td>
+                <td><%= dadosrelogios.modelo %></td>
+                <td><%= dadosrelogios.calibre %></td>
+                <td><%= dadosrelogios.movimento %></td>
+                <td><%= dadosrelogios.caixa %></td>
+                <td><%= dadosrelogios.cor_caixa %></td>
+                <td><%= dadosrelogios.pulseira %></td>
+                <td><%= dadosrelogios.cor_pulseira %></td>
+                <td>
+                    <a href="edit/<%= dadosrelogios.id_relogio %>" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="delete/<%= dadosrelogios.id_relogio %>" class="btn btn-sm btn-danger">Apagar</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" >
+  <h2>  <%= title %></h2>
+  <form action="/save" class="col-xs-6 col-md-4" method="POST">
+    <div class="form-group">
+        <label for="marca">* Marca:</label>
+        <input type="text" class="form-control" id="marca" placeholder="Coloque a marca do relógio" name="marca" required>
+    </div>
+    <div class="form-group">
+        <label for="modelo">Modelo:</label>
+        <input type="text" class="form-control" id="modelo" placeholder="Coloque o modelo" name="modelo">
+    </div>
+    <div class="form-group">
+        <label for="calibre">Cálibre:</label>
+        <input type="text" class="form-control" id="calibre" placeholder="Cálibre" name="calibre">
+    </div>
+    <div class="form-group">
+        <label for="movimento">* Movimento:</label>
+        <input type="text" class="form-control" id="movimento" placeholder="Movimento. Ex: quartz, automático" name="movimento" required>
+    </div>
+    <div class="form-group">
+        <label for="caixa">* Caixa:</label>
+        <input type="text" class="form-control" id="caixa" placeholder="Material da caixa. Ex: aço, plástico" name="caixa" required>
+    </div>
+    <div class="form-group">
+        <label for="cor_caixa">* Cor da Caixa:</label>
+        <input type="text" class="form-control" id="cor_caixa" placeholder="Cor da caixa" name="cor_caixa" required>
+    </div>
+    <div class="form-group">
+        <label for="pulseira">* Pulseira:</label>
+        <input type="text" class="form-control" id="pulseira" placeholder="Material da pulseira" name="pulseira" required>
+    </div>
+    <div class="form-group">
+        <label for="cor_pulseira">* Cor da Pulseira:</label>
+        <input type="text" class="form-control" id="cor_pulseira" placeholder="Cor da pulseira" name="cor_pulseira" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+</div>
+
+</body>
+</html>
